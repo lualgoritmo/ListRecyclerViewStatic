@@ -21,6 +21,7 @@ class PersonAdapter(
         listPerson = newListPerson
         notifyDataSetChanged()
     }
+
     override fun onBindViewHolder(holder: PersonViewHolder, position: Int) {
         val person = listPerson[position]
         holder.bind(person)
@@ -28,6 +29,7 @@ class PersonAdapter(
             onClick(person)
         }
     }
+
     class PersonViewHolder(private val binding: ItemPersonBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(person: PersonTest) {
