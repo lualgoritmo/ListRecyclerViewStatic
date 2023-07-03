@@ -1,4 +1,8 @@
 package com.example.listcardstatic.domain
 
-class ha {
-}
+data class PersonTest(
+    val name: String,
+    val age: String,
+    val imgPerson: Int,
+    val description: String
+)
