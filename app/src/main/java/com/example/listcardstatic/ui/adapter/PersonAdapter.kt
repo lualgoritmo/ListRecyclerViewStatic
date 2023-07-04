@@ -7,7 +7,7 @@ import com.example.listcardstatic.databinding.ItemPersonBinding
 import com.example.listcardstatic.domain.PersonTest
 
 class PersonAdapter(
-    private var listPerson: MutableList<PersonTest>,
+    private var listPerson: List<PersonTest>,
     private val onClick: (personTest: PersonTest) -> Unit
 ) : RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
@@ -30,7 +30,7 @@ class PersonAdapter(
         }
     }
 
-    class PersonViewHolder(private val binding: ItemPersonBinding) :
+    inner class PersonViewHolder(private val binding: ItemPersonBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(person: PersonTest) {
             binding.apply {
