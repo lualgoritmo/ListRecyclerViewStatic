@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.listcardstatic.databinding.ItemPersonBinding
 import com.example.listcardstatic.domain.PersonTest
 
-class PersonAdapter(
-    private var listPerson: List<PersonTest>,
-    private val onClick: (personTest: PersonTest) -> Unit
-) : RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
+class PersonAdapter(private val onClick: (personTest: PersonTest) -> Unit) :
+    RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
+
+    private var listPerson: MutableList<PersonTest> = mutableListOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
         val binding = ItemPersonBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PersonViewHolder(binding)
