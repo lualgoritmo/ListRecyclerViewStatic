@@ -21,8 +21,8 @@ class HomeActivity : AppCompatActivity() {
     private fun initView() {
         val adapter = PersonAdapter { person ->
             Toast.makeText(this, "Clicou na pessoa ${person.name}", Toast.LENGTH_SHORT).show()
-
         }
+
         binding.rcvListPerson.adapter = adapter
         adapter.updatePerson(person())
         binding.rcvListPerson.layoutManager = LinearLayoutManager(
