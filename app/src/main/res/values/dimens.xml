@@ -3,4 +3,5 @@
     <dimen name="default_24">24dp</dimen>
     <dimen name="radius_12">12dp</dimen>
     <dimen name="margin_btn_12">12dp</dimen>
+    <dimen name="margin_horiz_12dp">12dp</dimen>
 </resources>
