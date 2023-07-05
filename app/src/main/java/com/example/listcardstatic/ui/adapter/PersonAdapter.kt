@@ -32,13 +32,11 @@ class PersonAdapter(private val onClick: (personTest: PersonTest) -> Unit) :
 
     inner class PersonViewHolder(private val binding: ItemPersonBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(person: PersonTest) {
-            binding.apply {
-                tvNamePerson.text = person.name
-                edtAgePerson.text = person.age
-                imgPerson.setImageResource(person.imgPerson)
-                tvDescription.text = person.description
-            }
+        fun bind(person: PersonTest) = binding.apply {
+            tvNamePerson.text = person.name
+            edtAgePerson.text = person.age
+            imgPerson.setImageResource(person.imgPerson)
+            tvDescription.text = person.description
         }
     }
 }
