@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -36,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_24"
-            android:text="nome"
+            android:text="@string/tv_title_name"
             android:layout_marginHorizontal="@dimen/margin_horiz_12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/img_detail" />
@@ -66,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_horiz_12dp"
             android:layout_marginTop="14dp"
-            android:text="idade"
+            android:text="@string/tv_title_age"
             app:layout_constraintTop_toBottomOf="@+id/tv_detail_name"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -76,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginStart="@dimen/margin_horiz_12dp"
-            android:text="41"
+            android:text="@string/tv_detail_age"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_age"
             app:layout_constraintStart_toStartOf="parent"/>
 
@@ -85,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="gênero"
+            android:text="@string/tv_title_genere"
             android:layout_marginEnd="@dimen/margin_horiz_12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vw_detail" />
@@ -118,8 +117,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:gravity="center_horizontal"
-            android:text="We gather for about 90-minutes as a group. During this time, we introduce ourselves, briefly discuss a verse or passage from the Bible, and participate in conversation topics like travel, gardening, pets, culture, food, or hobbies.
-If you are searching for a community of friends and you want to gain more confidence in your conversational English, this group is a great place to start!
-Want more information? Call/text 403-389-6224 or email info@nbccalgary.com." />
+            android:text="@string/tv_text_example" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

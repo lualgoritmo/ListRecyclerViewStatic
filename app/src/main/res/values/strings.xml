@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ListCardStatic</string>
+    <string name="tv_title_genere">gênero</string>
+    <string name="tv_detail_age">41</string>
+    <string name="tv_title_age">idade</string>
+    <string name="tv_title_name">nome</string>
+    <string name="tv_text_example">We gather for about 90-minutes as a group. During this time, we introduce ourselves, briefly discuss a verse or passage from the Bible, and participate in conversation topics like travel, gardening, pets, culture, food, or hobbies. If you are searching for a community of friends and you want to gain more confidence in your conversational English, this group is a great place to start! Want more information? Call/text 403-389-6224 or email info@nbccalgary.com.</string>
 </resources>
