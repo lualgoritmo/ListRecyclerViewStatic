@@ -55,7 +55,7 @@
         <View
             android:id="@+id/vw_disable"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="01dp"
             android:layout_marginHorizontal="@dimen/default_24"
             android:layout_marginBottom="12dp"
             android:background="#FF00FF"
