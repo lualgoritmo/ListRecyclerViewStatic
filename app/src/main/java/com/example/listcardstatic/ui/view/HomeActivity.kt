@@ -5,14 +5,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.listcardstatic.R
-import com.example.listcardstatic.databinding.ActivityHomeBinding
+import com.example.listcardstatic.databinding.ActivityHomeBinding.inflate
 import com.example.listcardstatic.domain.PersonTest
 import com.example.listcardstatic.ui.adapter.PersonAdapter
 import com.example.listcardstatic.ui.detail.DetailPersonActivity
 
 class HomeActivity : AppCompatActivity() {
 
-    private val binding by lazy { ActivityHomeBinding.inflate(layoutInflater) }
+    private val binding by lazy { inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -37,7 +37,7 @@ class HomeActivity : AppCompatActivity() {
     private fun person(): MutableList<PersonTest> = mutableListOf(
         PersonTest(
             name = "Luci Meneive Silva",
-            age = "41",
+            age = "1550000",
             imgPerson = R.drawable.fit,
             description = "Vamos viver, vender, sorrir, buscar",
             detailGenere = "Feminino",
@@ -61,7 +61,7 @@ class HomeActivity : AppCompatActivity() {
         ),
         PersonTest(
             name = "Luciano Garcia do Nascimento",
-            age = "41",
+            age = "39",
             imgPerson = R.drawable.maritur,
             description = "Vamos viver, vender, sorrir, buscar",
             detailGenere = "Masculino",
@@ -69,7 +69,7 @@ class HomeActivity : AppCompatActivity() {
         ),
         PersonTest(
             name = "Mariana Ferreira Silva",
-            age = "41",
+            age = "3000",
             imgPerson = R.drawable.rastro,
             description = "Vamos viver, vender, sorrir, buscar",
             detailGenere = "Feminino",
@@ -93,7 +93,7 @@ class HomeActivity : AppCompatActivity() {
         ),
         PersonTest(
             name = "Armani Candi da Silva",
-            age = "41",
+            age = "602",
             imgPerson = R.drawable.barracao,
             description = "Vamos viver, vender, sorrir, buscar",
             detailGenere = "Masculino",

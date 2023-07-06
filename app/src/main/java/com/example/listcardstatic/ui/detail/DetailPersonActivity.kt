@@ -2,12 +2,12 @@ package com.example.listcardstatic.ui.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.listcardstatic.databinding.PersonDetailBinding
+import com.example.listcardstatic.databinding.PersonDetailBinding.inflate
 import com.example.listcardstatic.domain.PersonTest
 
 class DetailPersonActivity : AppCompatActivity() {
 
-    private val binding by lazy { PersonDetailBinding.inflate(layoutInflater) }
+    private val binding by lazy { inflate(layoutInflater) }
     private var person: PersonTest? = null
 
 
