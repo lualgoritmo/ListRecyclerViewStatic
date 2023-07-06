@@ -15,13 +15,16 @@ class DetailPersonActivity : AppCompatActivity() {
         person = intent?.getSerializableExtra("PESSOA") as? PersonTest
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        person?.let {
-            binding.tvDetailName.text = it.name
-            binding.tvDetailAge.text = it.age
-            binding.imgDetail.setImageResource(it.imgPerson)
-            binding.tvDetailGenere.text = it.detailGenere
-            binding.tvTitleDescription.text = it.detailTextPerson
-        }
+            personDetailView()
+
+    }
+
+    private fun personDetailView() =  person?.let {
+        binding.tvDetailName.text = it.name
+        binding.tvDetailAge.text = it.age
+        binding.imgDetail.setImageResource(it.imgPerson)
+        binding.tvDetailGenere.text = it.detailGenere
+        binding.tvTitleDescription.text = it.detailTextPerson
     }
 
 }
