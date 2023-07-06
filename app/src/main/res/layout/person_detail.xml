@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -16,25 +17,27 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/default_title_top_12"
             android:text="Detalhes do Personagem"
-            android:textSize="30dp" />
+            android:textSize="22dp" />
 
         <ImageView
             android:id="@+id/img_detail"
+            android:layout_width="327dp"
+            android:layout_height="354dp"
+            android:layout_marginHorizontal="@dimen/margin_horiz_12dp"
+            android:layout_marginTop="@dimen/default_top_01"
+            android:src="@drawable/rastro"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/zup" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_detail" />
 
         <TextView
             android:id="@+id/tv_title_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/default_24"
+            android:layout_marginTop="@dimen/default_top_01"
             android:text="@string/tv_title_name"
             android:layout_marginHorizontal="@dimen/margin_horiz_12dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +55,7 @@
         <View
             android:id="@+id/vw_detail"
             android:layout_width="match_parent"
-            android:layout_height="12dp"
+            android:layout_height="01dp"
             android:layout_marginTop="4dp"
             android:layout_marginHorizontal="@dimen/margin_horiz_12dp"
             android:background="#FF00FF"
@@ -73,7 +76,6 @@
             android:id="@+id/tv_detail_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:layout_marginStart="@dimen/margin_horiz_12dp"
             android:text="@string/tv_detail_age"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_age"
@@ -101,7 +103,7 @@
         <View
             android:id="@+id/vw_description"
             android:layout_width="match_parent"
-            android:layout_height="12dp"
+            android:layout_height="01dp"
             android:layout_marginTop="4dp"
             android:layout_marginHorizontal="@dimen/margin_horiz_12dp"
             android:background="#FF00FF"

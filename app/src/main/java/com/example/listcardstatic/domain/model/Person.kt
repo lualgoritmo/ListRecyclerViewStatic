@@ -6,5 +6,7 @@ data class PersonTest(
     val name: String,
     val age: String,
     val imgPerson: Int,
-    val description: String
+    val description: String,
+    val detailGenere: String,
+    val detailTextPerson: String
 ): Serializable

@@ -2,7 +2,6 @@ package com.example.listcardstatic.ui.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.listcardstatic.R
@@ -21,10 +20,8 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        val adapter = PersonAdapter { person ->
-            Toast.makeText(this, "Clicou na pessoa ${person.name}",
-                Toast.LENGTH_SHORT).show()
-            personSecond(person)
+        val adapter = PersonAdapter { detailPerson ->
+            personDetail(detailPerson)
 
         }
 
@@ -42,58 +39,76 @@ class HomeActivity : AppCompatActivity() {
             name = "Luci Meneive Silva",
             age = "41",
             imgPerson = R.drawable.fit,
-            description = "Vamos viver, vender, sorrir, buscar"
+            description = "Vamos viver, vender, sorrir, buscar",
+            detailGenere = "Feminino",
+            detailTextPerson = getString(R.string.tv_text_example)
         ),
         PersonTest(
             name = "Mariana Ferreira Silva",
             age = "41",
             imgPerson = R.drawable.barracao,
-            description = "Vamos viver, vender, sorrir, buscar"
+            description = "Vamos viver, vender, sorrir, buscar",
+            detailGenere = "Feminino",
+            detailTextPerson = getString(R.string.tv_text_example)
         ),
         PersonTest(
             name = "Santina Fresca Silva",
             age = "52",
             imgPerson = R.drawable.fritas,
-            description = " Aoh, dia dia dia dia dia dia dia"
+            description = " Aoh, dia dia dia dia dia dia dia",
+            detailGenere = "Feminino",
+            detailTextPerson = getString(R.string.tv_text_example)
         ),
         PersonTest(
             name = "Luciano Garcia do Nascimento",
             age = "41",
             imgPerson = R.drawable.maritur,
-            description = "Vamos viver, vender, sorrir, buscar"
+            description = "Vamos viver, vender, sorrir, buscar",
+            detailGenere = "Masculino",
+            detailTextPerson = getString(R.string.tv_text_example)
         ),
         PersonTest(
             name = "Mariana Ferreira Silva",
             age = "41",
             imgPerson = R.drawable.rastro,
-            description = "Vamos viver, vender, sorrir, buscar"
+            description = "Vamos viver, vender, sorrir, buscar",
+            detailGenere = "Feminino",
+            detailTextPerson = getString(R.string.tv_text_example)
         ),
         PersonTest(
             name = "Simetria Foz de Iguaçu",
             age = "52",
             imgPerson = R.drawable.zup,
-            description = " Aoh, dia dia dia dia dia dia dia"
+            description = " Aoh, dia dia dia dia dia dia dia",
+            detailGenere = "Feminino",
+            detailTextPerson = getString(R.string.tv_text_example)
         ),
         PersonTest(
             name = "Ferreiro Rocher Lide Campos",
             age = "41",
             imgPerson = R.drawable.fit,
-            description = "Vamos viver, vender, sorrir, buscar"
+            description = "Vamos viver, vender, sorrir, buscar",
+            detailGenere = "Masculino",
+            detailTextPerson = getString(R.string.tv_text_example)
         ),
         PersonTest(
             name = "Armani Candi da Silva",
             age = "41",
             imgPerson = R.drawable.barracao,
-            description = "Vamos viver, vender, sorrir, buscar"
+            description = "Vamos viver, vender, sorrir, buscar",
+            detailGenere = "Masculino",
+            detailTextPerson = getString(R.string.tv_text_example)
         ),
         PersonTest(
             name = "Livriero da Silva Costa",
-            age = "52",
+            age = "2000",
             imgPerson = R.drawable.fritas,
-            description = " Aoh, dia dia dia dia dia dia dia"
+            description = " Aoh, dia dia dia dia dia dia dia",
+            detailGenere = "Masculino",
+            detailTextPerson = getString(R.string.tv_text_example)
         )
     )
-    private fun personSecond(person: PersonTest) {
+    private fun personDetail(person: PersonTest) {
         Intent(this@HomeActivity, DetailPersonActivity::class.java)
             .apply { putExtra("PESSOA", person) }.run(::startActivity)
     }
