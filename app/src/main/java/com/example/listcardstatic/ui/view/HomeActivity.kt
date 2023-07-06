@@ -1,6 +1,7 @@
 package com.example.listcardstatic.ui.view
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,7 +21,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun initView() {
         val adapter = PersonAdapter { person ->
-            Toast.makeText(this, "Clicou na pessoa ${person.name}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Clicou na pessoa ${person.name}",
+                Toast.LENGTH_SHORT).show()
         }
 
         binding.rcvListPerson.adapter = adapter
@@ -64,9 +66,27 @@ class HomeActivity : AppCompatActivity() {
             description = "Vamos viver, vender, sorrir, buscar"
         ),
         PersonTest(
-            name = "Santina Fresca Silva",
+            name = "Simetria Foz de Iguaçu",
             age = "52",
             imgPerson = R.drawable.zup,
+            description = " Aoh, dia dia dia dia dia dia dia"
+        ),
+        PersonTest(
+            name = "Ferreiro Rocher Lide Campos",
+            age = "41",
+            imgPerson = R.drawable.fit,
+            description = "Vamos viver, vender, sorrir, buscar"
+        ),
+        PersonTest(
+            name = "Armani Candi da Silva",
+            age = "41",
+            imgPerson = R.drawable.barracao,
+            description = "Vamos viver, vender, sorrir, buscar"
+        ),
+        PersonTest(
+            name = "Livriero da Silva Costa",
+            age = "52",
+            imgPerson = R.drawable.fritas,
             description = " Aoh, dia dia dia dia dia dia dia"
         )
     )
