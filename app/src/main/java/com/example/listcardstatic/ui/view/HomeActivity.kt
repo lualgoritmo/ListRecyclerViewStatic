@@ -1,7 +1,7 @@
 package com.example.listcardstatic.ui.view
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,6 +9,7 @@ import com.example.listcardstatic.R
 import com.example.listcardstatic.databinding.ActivityHomeBinding
 import com.example.listcardstatic.domain.PersonTest
 import com.example.listcardstatic.ui.adapter.PersonAdapter
+import com.example.listcardstatic.ui.detail.DetailPersonActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -23,6 +24,8 @@ class HomeActivity : AppCompatActivity() {
         val adapter = PersonAdapter { person ->
             Toast.makeText(this, "Clicou na pessoa ${person.name}",
                 Toast.LENGTH_SHORT).show()
+            personSecond(person)
+
         }
 
         binding.rcvListPerson.adapter = adapter
@@ -90,4 +93,8 @@ class HomeActivity : AppCompatActivity() {
             description = " Aoh, dia dia dia dia dia dia dia"
         )
     )
+    private fun personSecond(person: PersonTest) {
+        Intent(this@HomeActivity, DetailPersonActivity::class.java)
+            .apply { putExtra("PESSOA", person) }.run(::startActivity)
+    }
 }
