@@ -9,6 +9,7 @@ import com.example.listcardstatic.databinding.ActivityHomeBinding.inflate
 import com.example.listcardstatic.domain.PersonTest
 import com.example.listcardstatic.ui.adapter.PersonAdapter
 import com.example.listcardstatic.ui.detail.DetailPersonActivity
+import com.example.listcardstatic.ui.util.PESSOA
 
 class HomeActivity : AppCompatActivity() {
 
@@ -106,10 +107,34 @@ class HomeActivity : AppCompatActivity() {
             description = " Aoh, dia dia dia dia dia dia dia",
             detailGenere = "Masculino",
             detailTextPerson = getString(R.string.tv_text_example)
+        ),
+        PersonTest(
+            name = "Tramontina Ferreira da Silva Campos",
+            age = "123",
+            imgPerson = R.drawable.fit,
+            description = "Simbora para onde der",
+            detailGenere = "Feminino",
+            detailTextPerson = getString(R.string.tv_text_example)
+        ),
+        PersonTest(
+            name = "Simonia Veredas Silva dos Campos",
+            age = "321",
+            imgPerson = R.drawable.barracao,
+            description = "Acorda azul",
+            detailGenere = "Feminino",
+            detailTextPerson = getString(R.string.tv_text_example)
+        ),
+        PersonTest(
+            name = "Clovis Damasceno Campos",
+            age = "456",
+            imgPerson = R.drawable.fritas,
+            description = " Aoh, dia dia dia dia dia dia dia",
+            detailGenere = "Masculino",
+            detailTextPerson = getString(R.string.tv_text_example)
         )
     )
     private fun personDetail(person: PersonTest) {
         Intent(this@HomeActivity, DetailPersonActivity::class.java)
-            .apply { putExtra("PESSOA", person) }.run(::startActivity)
+            .apply { putExtra(PESSOA, person) }.run(::startActivity)
     }
 }

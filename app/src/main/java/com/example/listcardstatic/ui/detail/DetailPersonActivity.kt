@@ -4,15 +4,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.listcardstatic.databinding.PersonDetailBinding.inflate
 import com.example.listcardstatic.domain.PersonTest
+import com.example.listcardstatic.ui.util.PESSOA
 
 class DetailPersonActivity : AppCompatActivity() {
 
     private val binding by lazy { inflate(layoutInflater) }
-    private var person: PersonTest? = null
-
-
+    private val person by lazy { intent?.getSerializableExtra(PESSOA) as? PersonTest}
     override fun onCreate(savedInstanceState: Bundle?) {
-        person = intent?.getSerializableExtra("PESSOA") as? PersonTest
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
             personDetailView()
