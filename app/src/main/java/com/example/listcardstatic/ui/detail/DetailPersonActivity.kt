@@ -17,12 +17,12 @@ class DetailPersonActivity : AppCompatActivity() {
 
     }
 
-    private fun personDetailView() =  person?.let {
-        binding.tvDetailName.text = it.name
-        binding.tvDetailAge.text = it.age
-        binding.imgDetail.setImageResource(it.imgPerson)
-        binding.tvDetailGenere.text = it.detailGenere
-        binding.tvTitleDescription.text = it.detailTextPerson
+    private fun personDetailView() =  person?.run {
+        binding.tvDetailName.text = name
+        binding.tvDetailAge.text = age
+        binding.imgDetail.setImageResource(imgPerson)
+        binding.tvDetailGenere.text = detailGenere
+        binding.tvTitleDescription.text = detailTextPerson
     }
 
 }
