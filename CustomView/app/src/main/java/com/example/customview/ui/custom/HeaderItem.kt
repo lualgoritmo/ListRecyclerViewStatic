@@ -21,7 +21,6 @@ class HeaderItem @JvmOverloads constructor(
     private val binding by lazy { val inflater = LayoutInflater.from(context)
         ItemHeaderMainBinding.inflate(inflater, this, true)
     }
-    val shape = GradientDrawable()
 
     var dataHeader: DataHeader = DataHeader(
         imgDataLeft = R.drawable.ic_launcher_foreground,
