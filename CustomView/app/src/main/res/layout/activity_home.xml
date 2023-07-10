@@ -7,13 +7,44 @@
     android:layout_height="match_parent"
     tools:context=".ui.view.HomeActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.example.customview.ui.custom.HeaderItem
+        android:id="@+id/nav_header_test"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="12dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.customview.ui.custom.HeaderItem
+        android:id="@+id/header_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_margin="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_header_test" />
+
+    <com.example.customview.ui.custom.HeaderItem
+        android:id="@+id/header_tree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_margin="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_second" />
+
+    <com.example.customview.ui.custom.HeaderItem
+        android:id="@+id/header_for"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_margin="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_tree" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
