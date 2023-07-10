@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
         rcvList.layoutManager = LinearLayoutManager(
             this@MainActivity,
             LinearLayoutManager.VERTICAL,
-            true)
+            true
+        )
     }
 
     private fun card(): MutableList<Card> = mutableListOf(
@@ -50,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         Card(
             imgItem = R.mipmap.ic_launcher_round,
             tvTitle = "Esse é o texto do Item Três"
+        )
     )
 
 }
