@@ -34,12 +34,11 @@ class ItemHeader @JvmOverloads constructor(
             imvImgLeft.setImageResource(value.imgDataLeft)
             tvTitle.text = value.titleHeader
             imvImgRight.setImageResource(value.imgDataRight)
-            setBackgroundColor(value.backColor)
 
             val shapeDrawable = GradientDrawable()
             shapeDrawable.shape = GradientDrawable.RECTANGLE
             shapeDrawable.cornerRadius = 12.0f
-            shapeDrawable.setStroke(6, Color.BLUE)
+//            shapeDrawable.setStroke(6, Color.BLUE)
             shapeDrawable.setColor(value.backColor)
             background = shapeDrawable
         }

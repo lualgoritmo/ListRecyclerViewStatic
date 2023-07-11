@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content" >
 
         <ImageView
             android:id="@+id/imv_left_section"
             android:layout_width="80dp"
             android:layout_height="36dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="24dp"
             android:src="@drawable/rastro"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,34 +41,36 @@
         <Button
             android:id="@+id/btn_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="24dp"
-            tools:text = "Botão"
+            android:layout_height="30dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/green_color"
+            android:textSize="12sp"
+            app:circularflow_radiusInDP="12dp"
             app:layout_constraintCircleRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+ 100" />
 
         <TextView
             android:id="@+id/tv_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_inform_section"
             tools:text="Esse texto é um exemplo" />
 
-        <ImageView
-            android:id="@+id/imv_second_section"
-            android:layout_width="65dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="24dp"
-            android:src="@drawable/rastro"
+        <View
+            android:id="@+id/vw_second_section"
+            android:layout_width="50dp"
+            android:layout_height="02dp"
+            android:background="@color/black"
+            android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
