@@ -49,6 +49,7 @@ class HomeActivity : AppCompatActivity() {
         binding.headerSecond.dataHeader = headerSecond
         binding.headerTree.dataHeader = headerTree
         binding.headerFor.dataHeader = headerFor
+
     }
 
 }

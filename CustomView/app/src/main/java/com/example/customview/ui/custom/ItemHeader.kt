@@ -12,7 +12,7 @@ import com.example.customview.R
 import com.example.customview.databinding.ItemHeaderMainBinding
 import com.example.customview.domain.model.DataHeader
 
-class HeaderItem @JvmOverloads constructor(
+class ItemHeader @JvmOverloads constructor(
     @NonNull context: Context,
     @Nullable attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
