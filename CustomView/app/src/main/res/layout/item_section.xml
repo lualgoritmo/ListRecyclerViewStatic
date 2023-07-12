@@ -40,17 +40,17 @@
 
         <Button
             android:id="@+id/btn_button"
+            style="@style/CustomButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginTop="48dp"
             android:layout_marginEnd="16dp"
-            android:background="@color/green_color"
+            android:background="@drawable/button_background"
             android:textSize="12sp"
-            app:circularflow_radiusInDP="12dp"
             app:layout_constraintCircleRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="+ 100" />
+            tools:text="+100" />
 
         <TextView
             android:id="@+id/tv_subtitle"
