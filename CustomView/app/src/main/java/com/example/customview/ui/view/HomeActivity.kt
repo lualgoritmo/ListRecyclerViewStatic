@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
             titleMain = "Esse é o Texto Principal",
             valuePrimary = "$39.534",
             valueSecundary = "123",
-            btnClick = clickHere(),
+            btnClick = clickHere,
             colorSection = Color.parseColor("#FF00FF")
         )
         binding.itemHeader.dataHeader = headerFor
@@ -39,11 +39,10 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-    private fun clickHere(): () -> Unit {
-        return {
+    private val clickHere : () -> Unit = {
             val message = "Botão clicado!"
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-        }
     }
+
 
 }

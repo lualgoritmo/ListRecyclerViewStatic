@@ -5,14 +5,13 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
-import android.view.View.OnClickListener
+import android.view.LayoutInflater
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.customview.R
 import com.example.customview.databinding.ItemSectionBinding
 import com.example.customview.domain.model.DataSection
-import android.view.LayoutInflater
 
 class ItemSection @JvmOverloads constructor(
     @NonNull context: Context,
