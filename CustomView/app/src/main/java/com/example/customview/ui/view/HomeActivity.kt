@@ -24,15 +24,15 @@ class HomeActivity : AppCompatActivity() {
             imgDataLeft = R.drawable.fit,
             titleHeader = "Panela Velha é que Faz Comida Boa",
             imgDataRight = R.drawable.fritas,
-            backColor = Color.parseColor("#F8F8FF")
+            backColor = Color.parseColor("#FF00FF")
         )
         val itemSection: DataSection = DataSection(
             imgLeftSection = R.drawable.fit,
             titleMain = "Esse é o Texto Principal",
-            valuePrimary = "123456",
+            valuePrimary = "$39.534",
             valueSecundary = "123",
             btnClick = clickHere(),
-            colorSection = Color.parseColor("#F8F8FF")
+            colorSection = Color.parseColor("#FF00FF")
         )
         binding.itemHeader.dataHeader = headerFor
         binding.itemSection.dataSection = itemSection

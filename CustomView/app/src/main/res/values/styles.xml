@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/button_background</item> <!-- Arquivo XML com a cor de fundo personalizada e raio da borda -->
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextStyleMain">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#DDDDDD</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TextSubTitle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#DDDDDD</item>
+        <item name="android:lineSpacingExtra">2dp</item>
     </style>
 </resources>
+
 

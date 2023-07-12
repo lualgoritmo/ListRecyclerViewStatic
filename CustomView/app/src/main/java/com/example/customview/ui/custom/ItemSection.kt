@@ -1,9 +1,10 @@
 package com.example.customview.ui.custom
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
-import android.view.LayoutInflater
 import android.view.View.OnClickListener
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
@@ -11,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.customview.R
 import com.example.customview.databinding.ItemSectionBinding
 import com.example.customview.domain.model.DataSection
+import android.view.LayoutInflater
 
 class ItemSection @JvmOverloads constructor(
     @NonNull context: Context,
@@ -41,16 +43,16 @@ class ItemSection @JvmOverloads constructor(
             binding.tvInformSection.text = value.valuePrimary
             binding.tvSubtitle.text = value.valueSecundary
             binding.btnButton.text = context.getString(R.string.btn_click)
-            binding.btnButton.setOnClickListener(clickHere)
+            binding.btnButton.backgroundTintList = ColorStateList.valueOf(Color
+                .parseColor("#00FF00"))
+            binding.btnButton.setOnClickListener { dataSection.btnClick.invoke() }
 
-            val shapeDrawable = GradientDrawable()
-            shapeDrawable.shape = GradientDrawable.RECTANGLE
-            shapeDrawable.cornerRadius = 12.0f
-            shapeDrawable.setColor(value.colorSection)
-            binding.root.background = shapeDrawable
+            binding.root.background = GradientDrawable().apply {
+                shape = GradientDrawable.RECTANGLE
+                cornerRadius = 12.0f
+                setColor(value.colorSection)
+            }
+
         }
 
-    private val clickHere: OnClickListener = OnClickListener {
-        dataSection.btnClick.invoke()
-    }
 }

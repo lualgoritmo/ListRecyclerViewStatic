@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyleMain">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#DDDDDD</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+
+    <style name="TextTitleSecond">
+        <item name="android:textSize">22sp</item>
+<!--        <item name="android:lineSpacingExtra">2dp</item>-->
+        <item name="android:textFontWeight">300</item>
+    </style>
+</resources>
