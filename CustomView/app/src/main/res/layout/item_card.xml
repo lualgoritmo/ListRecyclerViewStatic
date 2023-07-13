@@ -7,7 +7,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#F8F8FF">
 
         <ImageView
             android:id="@+id/img_card"
@@ -24,13 +25,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintStart_toEndOf="@+id/img_card"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Esse texto é um exemplo" />
 
         <TextView
             android:id="@+id/tv_text_second"
+            style="@style/TextStyleSimple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -46,13 +48,15 @@
             android:id="@+id/tv_text_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Texto regular" />
+
         <TextView
             android:id="@+id/tv_r_simple"
+            style="@style/TextStyleSimple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
