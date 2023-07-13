@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49b382b1-8a30-4d26-9af4-188e93717e99" name="Changes" comment="" />
+    <list default="true" id="49b382b1-8a30-4d26-9af4-188e93717e99" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomView/app/src/main/java/com/example/customview/ui/custom/ItemSection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/CustomView/app/src/main/java/com/example/customview/ui/custom/ItemSection.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LIstRCVLayout/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LIstRCVLayout/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +36,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/lualg/AndroidStudioProjects/ListRecyclerViewStatic/LIstRCVLayout",
+    "last_opened_file_path": "C:/Users/lualg/AndroidStudioProjects/RecyclerViewBasic",
     "show.do.not.copy.http.proxy.settings.to.gradle": "true"
   }
 }]]></component>

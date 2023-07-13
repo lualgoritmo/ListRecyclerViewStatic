@@ -16,9 +16,7 @@ class ItemCard @JvmOverloads constructor(
     @Nullable attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
-    private val binding by lazy {
-        ItemCardBinding.inflate(
-            LayoutInflater.from(context),
+    private val binding by lazy { ItemCardBinding.inflate(LayoutInflater.from(context),
             this, true
         )
     }

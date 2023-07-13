@@ -21,10 +21,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        val adapter = PersonAdapter { detailPerson ->
-            personDetail(detailPerson)
-
-        }
+        val adapter = PersonAdapter { detailPerson -> personDetail(detailPerson) }
 
         binding.rcvListPerson.adapter = adapter
         adapter.updatePerson(person())

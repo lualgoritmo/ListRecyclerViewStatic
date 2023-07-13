@@ -10,6 +10,7 @@ class PersonAdapter(private val onClick: (personTest: PersonTest) -> Unit) :
     RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
 
     private var listPerson: MutableList<PersonTest> = mutableListOf()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
         val binding = ItemPersonBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PersonViewHolder(binding)
