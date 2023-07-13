@@ -48,7 +48,7 @@ class ItemSection @JvmOverloads constructor(
 
             binding.root.background = GradientDrawable().apply {
                 shape = GradientDrawable.RECTANGLE
-                cornerRadius = 12.0f
+                cornerRadius = 12f
                 setColor(value.colorSection)
             }
 
