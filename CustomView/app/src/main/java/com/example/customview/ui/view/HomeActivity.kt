@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.customview.R
 import com.example.customview.databinding.ActivityHomeBinding
+import com.example.customview.domain.model.DataCard
 import com.example.customview.domain.model.DataHeader
 import com.example.customview.domain.model.DataSection
 
@@ -34,14 +35,23 @@ class HomeActivity : AppCompatActivity() {
             btnClick = clickHere,
             colorSection = Color.parseColor("#FF00FF")
         )
+        val cardItem = DataCard(
+            cardImg = R.drawable.fit,
+            tvTextMain = "1234567",
+            textSimple = "4321",
+            textRegular = "Azul é aqui",
+            textRsimple = "+100",
+            colorCard = Color.parseColor("#00FF00")
+        )
+        binding.cardItem.card = cardItem
         binding.itemHeader.dataHeader = headerFor
         binding.itemSection.dataSection = itemSection
 
     }
 
-    private val clickHere : () -> Unit = {
-            val message = "Botão clicado!"
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    private val clickHere: () -> Unit = {
+        val message = "Botão clicado!"
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
 

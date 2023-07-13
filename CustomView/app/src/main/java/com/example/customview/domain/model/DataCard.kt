@@ -4,7 +4,7 @@ import androidx.annotation.ColorInt
 
 class DataCard(
     val cardImg: Int,
-    val textBold: String,
+    val tvTextMain: String,
     val textSimple: String,
     val textRegular: String,
     val textRsimple: String,

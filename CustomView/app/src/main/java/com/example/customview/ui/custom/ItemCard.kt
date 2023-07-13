@@ -1,7 +1,7 @@
 package com.example.customview.ui.custom
 
 import android.content.Context
-import android.graphics.Paint.Style
+import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.NonNull
@@ -25,7 +25,7 @@ class ItemCard @JvmOverloads constructor(
 
     var card: DataCard = DataCard(
         cardImg = R.drawable.fit,
-        textBold = String(),
+        tvTextMain = String(),
         textSimple = String(),
         textRegular = String(),
         textRsimple = String(),
@@ -40,11 +40,26 @@ class ItemCard @JvmOverloads constructor(
                     false -> R.style.TextStyleMainNot
                 }
             }
-            setOf(tvTextSecond, tvRSimple).forEach { _ ->
+
+            setOf(tvTextSimple, tvRSimple).forEach { _ ->
                 when (value.isContent) {
                     true -> R.style.TextStyleSimple
                     false -> R.style.TextStyleSimple
                 }
             }
+
+            imgCard.setImageResource(value.cardImg)
+            tvTextMain.text = value.tvTextMain
+            tvTextSimple.text = value.textSimple
+            tvTextRegular.text = value.textRegular
+            tvRSimple.text = value.textRsimple
+
+            binding.root.background = GradientDrawable().apply {
+                shape = GradientDrawable.RECTANGLE
+                cornerRadius = 12f
+                setColor(value.colorCard)
+            }
+
+//            (background.mutate() as GradientDrawable).setColor(value.colorCard)
         }
 }
