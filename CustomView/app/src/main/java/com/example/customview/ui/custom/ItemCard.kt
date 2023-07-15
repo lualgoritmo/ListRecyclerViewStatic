@@ -2,10 +2,12 @@ package com.example.customview.ui.custom
 
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.ShapeDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.customview.R
 import com.example.customview.databinding.ItemCardBinding
@@ -15,8 +17,10 @@ class ItemCard @JvmOverloads constructor(
     @NonNull context: Context,
     @Nullable attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : ConstraintLayout(context, attrs, defStyleAttr) {
-    private val binding by lazy { ItemCardBinding.inflate(LayoutInflater.from(context),
+) : CardView(context, attrs, defStyleAttr) {
+    private val binding by lazy {
+        ItemCardBinding.inflate(
+            LayoutInflater.from(context),
             this, true
         )
     }
@@ -32,6 +36,7 @@ class ItemCard @JvmOverloads constructor(
     )
         set(value) = with(binding) {
             field = value
+
             setOf(tvTextMain, tvTextRegular).forEach { _ ->
                 when (value.isContent) {
                     true -> R.style.TextStyleMainNot
@@ -51,13 +56,7 @@ class ItemCard @JvmOverloads constructor(
             tvTextSimple.text = value.textSimple
             tvTextRegular.text = value.textRegular
             tvRSimple.text = value.textRsimple
+            ctlItemCard.setBackgroundColor(value.colorCard)
 
-            binding.root.background = GradientDrawable().apply {
-                shape = GradientDrawable.RECTANGLE
-                cornerRadius = 12f
-                setColor(value.colorCard)
-            }
-
-//            (background.mutate() as GradientDrawable).setColor(value.colorCard)
         }
 }
