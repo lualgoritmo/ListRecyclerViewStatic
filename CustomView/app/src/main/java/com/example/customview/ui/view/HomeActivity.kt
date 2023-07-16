@@ -49,7 +49,7 @@ class HomeActivity : AppCompatActivity() {
         val message = "Botão clicado!"
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-    fun initRcv() = binding?.run {
+    private fun initRcv() = binding?.run {
         this.rcvItemCard.adapter = adapter
         adapter.updateCard(itemListCard())
         rcvItemCard.layoutManager = LinearLayoutManager(this@HomeActivity)
@@ -61,7 +61,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Foi eu",
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
-            colorCard = Color.parseColor("#FF00FF"),
+            colorCard = Color.parseColor("#000000"),
             isContent = false
         ),
         DataCard(

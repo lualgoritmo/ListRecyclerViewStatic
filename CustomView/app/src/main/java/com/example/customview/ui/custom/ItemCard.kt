@@ -56,7 +56,6 @@ class ItemCard @JvmOverloads constructor(
             tvTextSimple.text = value.textSimple
             tvTextRegular.text = value.textRegular
             tvRSimple.text = value.textRsimple
-            ctlItemCard.setBackgroundColor(value.colorCard)
-
+            (background.mutate() as GradientDrawable).setColor(value.colorCard)
         }
 }
