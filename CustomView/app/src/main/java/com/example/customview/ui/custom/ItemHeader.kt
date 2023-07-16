@@ -38,7 +38,6 @@ class ItemHeader @JvmOverloads constructor(
             val shapeDrawable = GradientDrawable()
             shapeDrawable.shape = GradientDrawable.RECTANGLE
             shapeDrawable.cornerRadius = 12.0f
-//            shapeDrawable.setStroke(6, Color.BLUE)
             shapeDrawable.setColor(value.backColor)
             background = shapeDrawable
         }

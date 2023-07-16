@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.customview.R
 import com.example.customview.databinding.ActivityHomeBinding
 import com.example.customview.domain.model.DataCard
@@ -50,7 +49,7 @@ class HomeActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
     private fun initRcv() = binding?.run {
-        this.rcvItemCard.adapter = adapter
+        rcvItemCard.adapter = adapter
         adapter.updateCard(itemListCard())
         rcvItemCard.layoutManager = LinearLayoutManager(this@HomeActivity)
     }
@@ -61,7 +60,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Foi eu",
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
-            colorCard = Color.parseColor("#000000"),
+            colorCard = Color.parseColor("#F0F8FF"),
             isContent = false
         ),
         DataCard(
@@ -70,7 +69,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Foi eu",
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
-            colorCard = Color.parseColor("#CCCCCC"),
+            colorCard = Color.parseColor("#F0F8FF"),
             isContent = false
         ),
         DataCard(
@@ -79,7 +78,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Foi eu",
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
-            colorCard = Color.parseColor("#DDDDDD"),
+            colorCard = Color.parseColor("#F0F8FF"),
             isContent = false
         )
     )

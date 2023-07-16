@@ -2,13 +2,11 @@ package com.example.customview.ui.custom
 
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
-import android.graphics.drawable.ShapeDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
 import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.customview.R
 import com.example.customview.databinding.ItemCardBinding
 import com.example.customview.domain.model.DataCard
@@ -24,7 +22,6 @@ class ItemCard @JvmOverloads constructor(
             this, true
         )
     }
-
     var card: DataCard = DataCard(
         cardImg = R.drawable.fit,
         tvTextMain = String(),
