@@ -38,9 +38,19 @@ class HomeActivity : AppCompatActivity() {
             btnClick = clickHere,
             colorSection = Color.parseColor("#F0F8FF")
         )
+        val itemCard = DataCard(
+            cardImg = R.drawable.fit,
+            tvTextMain = "Esse aqui mesmo",
+            textSimple = "Foi eu",
+            textRegular = "Texto Regular",
+            textRsimple = "Texto Simples",
+            colorCard = Color.parseColor("#FF00FF"),
+            isContent = false
+        )
 
         binding.itemHeader.dataHeader = headerFor
         binding.itemSection.dataSection = itemSection
+        binding.ctmItemCard.card = itemCard
 
     }
 
