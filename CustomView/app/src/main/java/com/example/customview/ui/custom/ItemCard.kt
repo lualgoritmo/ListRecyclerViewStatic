@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
-import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.customview.R
 import com.example.customview.databinding.ItemCardBinding
 import com.example.customview.domain.model.DataCard
@@ -15,11 +15,11 @@ class ItemCard @JvmOverloads constructor(
     @NonNull context: Context,
     @Nullable attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : CardView(context, attrs, defStyleAttr) {
+) : ConstraintLayout(context, attrs, defStyleAttr) {
     private val binding by lazy {
         ItemCardBinding.inflate(
             LayoutInflater.from(context),
-            this, true
+            this, false
         )
     }
     var card: DataCard = DataCard(
@@ -53,6 +53,18 @@ class ItemCard @JvmOverloads constructor(
             tvTextSimple.text = value.textSimple
             tvTextRegular.text = value.textRegular
             tvRSimple.text = value.textRsimple
-            (background.mutate() as GradientDrawable).setColor(value.colorCard)
+
+//            val shapeDrawable = GradientDrawable()
+//            shapeDrawable.shape = GradientDrawable.RECTANGLE
+//            shapeDrawable.cornerRadius = 12.0f
+//            shapeDrawable.setColor(value.colorCard)
+//            background = shapeDrawable
+
+            binding.ctlItemCard.background = GradientDrawable().apply {
+                shape = GradientDrawable.RECTANGLE
+                cornerRadius = 12.0f
+                setColor(value.colorCard)
+            }
+//            (background.mutate() as GradientDrawable).setColor(value.colorCard)
         }
 }

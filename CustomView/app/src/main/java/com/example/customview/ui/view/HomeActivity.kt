@@ -38,9 +38,19 @@ class HomeActivity : AppCompatActivity() {
             btnClick = clickHere,
             colorSection = Color.parseColor("#F0F8FF")
         )
+        val itemCard = DataCard(
+            cardImg = R.drawable.fit,
+            tvTextMain = "Primeiro",
+            textSimple = "Simples Primeiro",
+            textRegular = "Texto Regular",
+            textRsimple = "Texto Regular Simples",
+            colorCard = Color.parseColor("#FF00FF"),
+            isContent = false
+        )
 
         binding.itemHeader.dataHeader = headerFor
         binding.itemSection.dataSection = itemSection
+        binding.ctmItemCard.card = itemCard
 
     }
 
@@ -48,7 +58,7 @@ class HomeActivity : AppCompatActivity() {
         val message = "Botão clicado!"
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-    private fun initRcv() = binding?.run {
+    private fun initRcv() = binding.run {
         rcvItemCard.adapter = adapter
         adapter.updateCard(itemListCard())
         rcvItemCard.layoutManager = LinearLayoutManager(this@HomeActivity)
@@ -60,7 +70,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Foi eu",
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
-            colorCard = Color.parseColor("#F0F8FF"),
+            colorCard = Color.parseColor("#000000"),
             isContent = false
         ),
         DataCard(
@@ -69,7 +79,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Foi eu",
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
-            colorCard = Color.parseColor("#F0F8FF"),
+            colorCard = Color.parseColor("#FF00FF"),
             isContent = false
         ),
         DataCard(

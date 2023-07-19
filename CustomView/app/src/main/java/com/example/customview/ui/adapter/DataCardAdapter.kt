@@ -1,5 +1,7 @@
 package com.example.customview.ui.adapter
 
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +14,8 @@ class DataCardAdapter(private val onClick: (DataCard) -> Unit) :
     private var listCard: MutableList<DataCard> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = DataCardViewHolder(
-        binding = ItemCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding = ItemCardBinding.inflate(LayoutInflater.from(parent.context), parent,
+            false)
     )
 
     override fun getItemCount() = listCard.size
@@ -36,7 +39,14 @@ class DataCardAdapter(private val onClick: (DataCard) -> Unit) :
             tvTextSimple.text = dataCard.textSimple
             tvTextRegular.text = dataCard.textRegular
             tvRSimple.text = dataCard.textRsimple
-            ctlItemCard.setBackgroundColor(dataCard.colorCard)
+
+            val shapeDrawable = GradientDrawable()
+            shapeDrawable.shape = GradientDrawable.RECTANGLE
+            shapeDrawable.cornerRadius = 12.0f
+            shapeDrawable.setStroke(8, Color.GREEN)
+            shapeDrawable.setColor(dataCard.colorCard)
+            ctlItemCard.background = shapeDrawable
+
         }
     }
 }
