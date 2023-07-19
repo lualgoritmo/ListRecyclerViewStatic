@@ -1,5 +1,6 @@
 package com.example.customview.ui.view
 
+import DataCardAdapter
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
@@ -10,7 +11,6 @@ import com.example.customview.databinding.ActivityHomeBinding
 import com.example.customview.domain.model.DataCard
 import com.example.customview.domain.model.DataHeader
 import com.example.customview.domain.model.DataSection
-import com.example.customview.ui.adapter.DataCardAdapter
 
 class HomeActivity : AppCompatActivity() {
 
@@ -44,7 +44,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Simples Primeiro",
             textRegular = "Texto Regular",
             textRsimple = "Texto Regular Simples",
-            colorCard = Color.parseColor("#FF00FF"),
+            colorCard = Color.parseColor("#F0F8FF"),
             isContent = false
         )
 
@@ -70,7 +70,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Foi eu",
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
-            colorCard = Color.parseColor("#000000"),
+            colorCard = Color.parseColor("#F0F8FF"),
             isContent = false
         ),
         DataCard(
@@ -79,7 +79,7 @@ class HomeActivity : AppCompatActivity() {
             textSimple = "Foi eu",
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
-            colorCard = Color.parseColor("#FF00FF"),
+            colorCard = Color.parseColor("#F0F8FF"),
             isContent = false
         ),
         DataCard(

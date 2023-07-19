@@ -1,5 +1,3 @@
-package com.example.customview.ui.adapter
-
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
@@ -13,12 +11,12 @@ class DataCardAdapter(private val onClick: (DataCard) -> Unit) :
 
     private var listCard: MutableList<DataCard> = mutableListOf()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = DataCardViewHolder(
-        binding = ItemCardBinding.inflate(LayoutInflater.from(parent.context), parent,
-            false)
-    )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataCardViewHolder {
+        val binding = ItemCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return DataCardViewHolder(binding)
+    }
 
-    override fun getItemCount() = listCard.size
+    override fun getItemCount(): Int = listCard.size
 
     override fun onBindViewHolder(holder: DataCardViewHolder, position: Int) {
         val cardList = listCard[position]
@@ -33,20 +31,19 @@ class DataCardAdapter(private val onClick: (DataCard) -> Unit) :
 
     inner class DataCardViewHolder(private val binding: ItemCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(dataCard: DataCard) = binding?.run {
-            imgCard.setImageResource(dataCard.cardImg)
-            tvTextMain.text = dataCard.tvTextMain
-            tvTextSimple.text = dataCard.textSimple
-            tvTextRegular.text = dataCard.textRegular
-            tvRSimple.text = dataCard.textRsimple
+        fun bind(dataCard: DataCard) {
+            binding.imgCard.setImageResource(dataCard.cardImg)
+            binding.tvTextMain.text = dataCard.tvTextMain
+            binding.tvTextSimple.text = dataCard.textSimple
+            binding.tvTextRegular.text = dataCard.textRegular
+            binding.tvRSimple.text = dataCard.textRsimple
 
             val shapeDrawable = GradientDrawable()
             shapeDrawable.shape = GradientDrawable.RECTANGLE
             shapeDrawable.cornerRadius = 12.0f
-            shapeDrawable.setStroke(8, Color.GREEN)
+            shapeDrawable.setStroke(2, Color.GREEN)
             shapeDrawable.setColor(dataCard.colorCard)
-            ctlItemCard.background = shapeDrawable
-
+            binding.ctlItemCard.background = shapeDrawable
         }
     }
 }

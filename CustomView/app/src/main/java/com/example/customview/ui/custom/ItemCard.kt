@@ -19,7 +19,7 @@ class ItemCard @JvmOverloads constructor(
     private val binding by lazy {
         ItemCardBinding.inflate(
             LayoutInflater.from(context),
-            this, false
+            this@ItemCard, true
         )
     }
     var card: DataCard = DataCard(
@@ -54,17 +54,10 @@ class ItemCard @JvmOverloads constructor(
             tvTextRegular.text = value.textRegular
             tvRSimple.text = value.textRsimple
 
-//            val shapeDrawable = GradientDrawable()
-//            shapeDrawable.shape = GradientDrawable.RECTANGLE
-//            shapeDrawable.cornerRadius = 12.0f
-//            shapeDrawable.setColor(value.colorCard)
-//            background = shapeDrawable
-
-            binding.ctlItemCard.background = GradientDrawable().apply {
+            ctlItemCard.background = GradientDrawable().apply {
                 shape = GradientDrawable.RECTANGLE
                 cornerRadius = 12.0f
                 setColor(value.colorCard)
             }
-//            (background.mutate() as GradientDrawable).setColor(value.colorCard)
         }
 }
