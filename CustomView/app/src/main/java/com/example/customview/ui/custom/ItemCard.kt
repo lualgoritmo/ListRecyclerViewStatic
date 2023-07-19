@@ -1,6 +1,7 @@
 package com.example.customview.ui.custom
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -57,6 +58,7 @@ class ItemCard @JvmOverloads constructor(
             ctlItemCard.background = GradientDrawable().apply {
                 shape = GradientDrawable.RECTANGLE
                 cornerRadius = 12.0f
+                setStroke(2, Color.GREEN)
                 setColor(value.colorCard)
             }
         }
