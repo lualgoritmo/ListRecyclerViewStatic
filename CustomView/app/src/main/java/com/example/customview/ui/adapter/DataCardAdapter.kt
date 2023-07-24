@@ -1,4 +1,4 @@
-    import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,10 +10,11 @@ class DataCardAdapter(private val onClick: (DataCard) -> Unit) :
 
     private var listCard: MutableList<DataCard> = mutableListOf()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataCardViewHolder {
-        val binding = ItemCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return DataCardViewHolder(binding)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = DataCardViewHolder(
+            binding = ItemCardBinding.inflate(LayoutInflater.from(parent.context),
+                parent, false)
+    )
+
 
     override fun getItemCount(): Int = listCard.size
 
