@@ -37,12 +37,19 @@ class DataCardAdapter(private val onClick: (DataCard) -> Unit) :
             binding.tvTextRegular.text = dataCard.textRegular
             binding.tvRSimple.text = dataCard.textRsimple
 
-            val shapeDrawable = GradientDrawable()
-            shapeDrawable.shape = GradientDrawable.RECTANGLE
-            shapeDrawable.cornerRadius = 12.0f
-            shapeDrawable.setStroke(2, dataCard.colorStroke)
-            shapeDrawable.setColor(dataCard.colorCard)
-            binding.ctlItemCard.background = shapeDrawable
+//            val shapeDrawable = GradientDrawable()
+//            shapeDrawable.shape = GradientDrawable.RECTANGLE
+//            shapeDrawable.cornerRadius = 12.0f
+//            shapeDrawable.setStroke(2, dataCard.colorStroke)
+//            shapeDrawable.setColor(dataCard.colorCard)
+//            binding.ctlItemCard.background = shapeDrawable
+
+            binding.ctlItemCard.background = GradientDrawable().apply {
+                shape = GradientDrawable.RECTANGLE
+                cornerRadius = 12.0f
+                setStroke(2, dataCard.colorStroke)
+                setColor(dataCard.colorCard)
+            }
         }
     }
 }
