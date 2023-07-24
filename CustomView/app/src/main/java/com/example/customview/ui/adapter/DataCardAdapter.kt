@@ -1,5 +1,4 @@
-import android.graphics.Color
-import android.graphics.drawable.GradientDrawable
+    import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -41,7 +40,7 @@ class DataCardAdapter(private val onClick: (DataCard) -> Unit) :
             val shapeDrawable = GradientDrawable()
             shapeDrawable.shape = GradientDrawable.RECTANGLE
             shapeDrawable.cornerRadius = 12.0f
-            shapeDrawable.setStroke(2, Color.GREEN)
+            shapeDrawable.setStroke(2, dataCard.colorStroke)
             shapeDrawable.setColor(dataCard.colorCard)
             binding.ctlItemCard.background = shapeDrawable
         }

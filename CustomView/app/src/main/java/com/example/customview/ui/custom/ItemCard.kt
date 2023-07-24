@@ -30,6 +30,7 @@ class ItemCard @JvmOverloads constructor(
         textRegular = String(),
         textRsimple = String(),
         colorCard = 0,
+        colorStroke = Color.parseColor("#FFFF00"),
         isContent = false
     )
         set(value) = with(binding) {
@@ -58,7 +59,7 @@ class ItemCard @JvmOverloads constructor(
             ctlItemCard.background = GradientDrawable().apply {
                 shape = GradientDrawable.RECTANGLE
                 cornerRadius = 12.0f
-                setStroke(2, Color.GREEN)
+                setStroke(2, value.colorStroke)
                 setColor(value.colorCard)
             }
         }

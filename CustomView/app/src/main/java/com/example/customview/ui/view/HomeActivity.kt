@@ -45,6 +45,7 @@ class HomeActivity : AppCompatActivity() {
             textRegular = "Texto Regular",
             textRsimple = "Texto Regular Simples",
             colorCard = Color.parseColor("#F0F8FF"),
+            colorStroke = R.color.red_color,
             isContent = false
         )
 
@@ -71,6 +72,7 @@ class HomeActivity : AppCompatActivity() {
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
             colorCard = Color.parseColor("#F0F8FF"),
+            colorStroke = Color.parseColor("#FF00FF"),
             isContent = false
         ),
         DataCard(
@@ -80,6 +82,7 @@ class HomeActivity : AppCompatActivity() {
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
             colorCard = Color.parseColor("#F0F8FF"),
+            colorStroke = Color.parseColor("#FFFF00"),
             isContent = false
         ),
         DataCard(
@@ -89,11 +92,13 @@ class HomeActivity : AppCompatActivity() {
             textRegular = "Texto Regular",
             textRsimple = "Texto Simples",
             colorCard = Color.parseColor("#F0F8FF"),
+            colorStroke = Color.parseColor("#FF00FF"),
             isContent = false
         )
     )
 
-    private fun onClick(dataCard: DataCard) = Toast.makeText(this,
-        "Botão clickado, ${ dataCard.tvTextMain }", Toast.LENGTH_SHORT).show()
+    private fun onClick(dataCard: DataCard) = Toast.makeText(applicationContext,
+        "Botão clickado, ${dataCard.tvTextMain}", Toast.LENGTH_SHORT).show()
+
 
 }

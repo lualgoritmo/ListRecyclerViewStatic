@@ -9,5 +9,6 @@ class DataCard(
     val textRegular: String,
     val textRsimple: String,
     @ColorInt val colorCard: Int,
+    @ColorInt val colorStroke: Int,
     val isContent: Boolean = false
 )
