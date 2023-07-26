@@ -30,24 +30,28 @@ class ItemCard @JvmOverloads constructor(
         textRegular = String(),
         textRsimple = String(),
         colorCard = 0,
-        colorStroke = Color.parseColor("#FFFF00"),
+        colorStroke = 0,
         isContent = false
     )
         set(value) = with(binding) {
             field = value
 
-            setOf(tvTextMain, tvTextRegular).forEach { _ ->
-                when (value.isContent) {
-                    true -> R.style.TextStyleMainNot
-                    false -> R.style.TextStyleMainNot
-                }
+            setOf(tvTextMain, tvTextRegular).forEach { textView ->
+                textView.setTextAppearance(
+                    when (value.isContent) {
+                        true -> R.style.TextStyleMainNot
+                        false -> R.style.TextStyleMainNot
+                    }
+                )
             }
 
-            setOf(tvTextSimple, tvRSimple).forEach { _ ->
-                when (value.isContent) {
-                    true -> R.style.TextStyleSimple
-                    false -> R.style.TextStyleSimple
-                }
+            setOf(tvTextSimple, tvRSimple).forEach { textView ->
+                textView.setTextAppearance(
+                    when (value.isContent) {
+                        true -> R.style.TextStyleSimple
+                        false -> R.style.TextStyleSimple
+                    }
+                )
             }
 
             imgCard.setImageResource(value.cardImg)

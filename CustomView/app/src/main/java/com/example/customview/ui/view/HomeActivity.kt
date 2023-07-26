@@ -45,7 +45,7 @@ class HomeActivity : AppCompatActivity() {
             textRegular = "Texto Regular",
             textRsimple = "Texto Regular Simples",
             colorCard = Color.parseColor("#F0F8FF"),
-            colorStroke = R.color.red_color,
+            colorStroke = Color.parseColor("#00FF00"),
             isContent = false
         )
 

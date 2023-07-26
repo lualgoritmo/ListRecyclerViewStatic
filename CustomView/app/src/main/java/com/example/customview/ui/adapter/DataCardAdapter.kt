@@ -15,7 +15,6 @@ class DataCardAdapter(private val onClick: (DataCard) -> Unit) :
                 parent, false)
     )
 
-
     override fun getItemCount(): Int = listCard.size
 
     override fun onBindViewHolder(holder: DataCardViewHolder, position: Int) {
