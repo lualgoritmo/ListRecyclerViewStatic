@@ -8,10 +8,9 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.customview.domain.model.DataCard
 import com.example.customview.ui.custom.ItemCard
 import com.example.customview.ui.view.HomeActivity
-import org.junit.Test
-
 import org.junit.Assert.*
 import org.junit.Before
+import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
@@ -51,4 +50,6 @@ class ItemCardTest {
         assertEquals(R.color.red_color, customCard.card.colorStroke)
         assertFalse(customCard.card.isContent)
     }
+
+
 }
